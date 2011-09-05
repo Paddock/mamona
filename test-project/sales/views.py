@@ -15,7 +15,7 @@ def order_singleitem(request):
 	order = UnawareOrder.objects.create()
 	order.item_set.create(
 			name=u"Donation for Mamona author",
-			price=random.random() * 8 + 2
+			price=str(random.random() * 8 + 2)
 			)
 	return direct_to_template(
 			request,
